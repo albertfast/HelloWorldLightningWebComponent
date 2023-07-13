@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="GET RECORDS : SAME OBJECT" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                    <div key={acc.result.id} class="slds-var-m-bottom_small">
+                        <strong>Name: </strong> {acc.result.fields.Name.value} <br/>
+                        <strong>Type: </strong> {acc.result.fields.Type.value} <br/>
+                        <strong>Industry: </strong> {acc.result.fields.Industry.value}
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="GET RECORDS : MULTIPLE OBJECT">
+        <div class="slds-var-m-around_medium">
+            <div>
+                <strong>ACCOUNT:</strong> <br/>
+                <template if:true={accounts}>
+                    <strong>Name: </strong> {accounts.result.fields.Name.value} <br/>
+                    <strong>Industry: </strong> {accounts.result.fields.Industry.value}
+                    
+                </template>
+            </div>
+            <div class="slds-var-m-top_small">
+                <strong>CONTACT:</strong> <br/>
+                <template if:true={contacts}>
+                    <strong>Name: </strong> {contacts.result.fields.Name.value} <br/>
+                    <strong>Title: </strong> {contacts.result.fields.Title.value}
+                    
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Component Composition">
+        <div class="slds-var-m-around_medium">
+
+           <h1>Hello, I am heading!</h1>
+            <template for:each={colors} for:item="color">
+                <div key={color} class="color">{color}</div>
+            </template>
+            <div class="child" lwc:dom="manual"></div>
+           <!--button-->
+           <lightning-button
+           label="Click Me"
+           variant="brand"
+           onclick={clickHandler}>
+           </lightning-button>
+        </div>  
+    </lightning-card>  
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="GET RECORD" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <template if:true={account}>
+            Name: {account.fields.Name.value} <br/>
+            Type: {account.fields.Type.value} <br/>
+            Industry: {account.fields.Industry.value} <br/>
+            Annual Revenue: {account.fields.AnnualRevenue.value} 
+            </template>   
+        </div>
+    </lightning-card>
+</template>

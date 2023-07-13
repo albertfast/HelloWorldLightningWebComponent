@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Imperative Apex With Params">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+              type="search"
+              label="Enter key words to find the contact"
+              onkeyup={searchHandler}>
+            </lightning-input>
+            <div class="slds-var-m-top_medium">
+                <template if:true={contacts}>
+                    <template for:each={contacts} for:item="con">
+                      <div key={con.Id} class="slds-var-m-bottom_small">
+                       <strong>{con.FirstName} {con.LastName} </strong>  <br/>
+                        {con.Title} <br/>
+                        {con.Email}
+                      </div>  
+                    </template>
+                </template>   
+            </div>  
+        </div>
+    </lightning-card>
+</template>

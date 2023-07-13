@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES BY RECORD TYPE">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox   
+                options={typeOptions} 
+                value={selectedType} 
+                name="type" 
+                label="Select your case type"  
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <lightning-combobox   
+                options={reasonOptions} 
+                value={selectedReason}
+                name="reason"  
+                label="Select your case reason"  
+                onchange={changeHandler}>
+            </lightning-combobox> 
+            <div class="slds-var-m-top_small">Selected case type is : {selectedType} and <br> reason is : {selectedReason}</div>
+        </div>
+    </lightning-card>
+</template>

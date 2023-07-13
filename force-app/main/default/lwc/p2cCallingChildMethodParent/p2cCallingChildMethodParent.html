@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="P2C Calling Child Method">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                type="number"
+                label="Enter progress value"
+                value={progress}
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <lightning-button
+                label="Reset progress"
+                onclick={resetHandler}>
+            </lightning-button>
+            <c-progress-bar
+                progress-value={progress}>
+            </c-progress-bar>
+        </div>
+    </lightning-card>   
+</template>

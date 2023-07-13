@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="CASE UPDATE FORM" icon-name="standard:case">
+        <div class="slds-var-m-around_medium">
+            <form class="caseform">
+               <template if:true={caseRec.data}>
+                  <lightning-input
+                        type="text"
+                        name="Subject"
+                        label="Subject"
+                        value={caseRec.data.fields.Subject.value}
+                        onchange={changeHandler}>
+                  </lightning-input>
+                  <lightning-input
+                        type="text"
+                        name="Description"
+                        label="Description"
+                        value={caseRec.data.fields.Description.value}
+                        onchange={changeHandler}>
+                  </lightning-input>
+                  <lightning-input
+                        type="text"
+                        name="Status"
+                        label="Status"
+                        value={caseRec.data.fields.Status.value}
+                        onchange={changeHandler}>
+                  </lightning-input>
+                  <lightning-input
+                        type="text"
+                        name="Priority"
+                        label="Priority"
+                        value={caseRec.data.fields.Priority.value}
+                        onchange={changeHandler}>
+                  </lightning-input>  
+               </template> 
+            </form> 
+            <div class="slds-m-top_small slds-align_absolute-center">
+                <lightning-button
+                    label="Update"
+                    variant="brand"
+                    onclick={updateCase}>
+                </lightning-button>
+            </div>  
+        </div>
+    </lightning-card>
+</template>
